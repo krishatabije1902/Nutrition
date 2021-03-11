@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<title>BMI Calculator</title>
+	<link href="style5.css" rel="stylesheet">
+</head>
+<body>	
+    <div class="wrapper">
+		<div class="sidebar">
+			<h2>Food Nutrition</h2> 
+			<ul>
+				<li><a href="Main.html"><i class="fas fa-home"></i> Home </a></li>
+				<li><a href="#"><i class="fab fa-nutritionix"></i> Calculator </a></li>
+				<li><a href="Topic.html"><i class="fas fa-book-open"></i> Topic </a></li>
+				<li><a href="Recipe.html"><i class="fas fa-utensils"></i> Recipes </a></li>
+				<li><a href="Tips.html"><i class="far fa-lightbulb"></i> Tips/Advices </a></li>
+			</ul>
+		</div>
+	</div>
+	<br> 
+	<center>
+		<div class="container">
+			<h1>BMI Calculator</h1>
+			<hr>
+			<br>
+			<br>
+			<br>
+			<label for="">Height (cm.)</label>
+			<input type="text" id="h"></input><br>
+			<br>
+			<label for="">Weight (kg.)</label>
+			<input type="text" id="w"></input><br>
+			<br>
+			<br>
+			<p id="result"></p>
+			<button id="btn" onclick="BMI ()">Compute</button>
+			<p>Please scroll down to know more...</p>
+		</div>
+	</center>
+		<div class="box">
+				<h2>BMI</h2><br>
+				<p>Body Mass Index (BMI) is a person’s weight in 
+				kilograms divided by the square of height in meters. 
+				A high BMI can be an indicator of high body fatness. 
+				BMI can be used to screen for weight categories that 
+				may lead to health problems but it is not diagnostic 
+				of the body fatness or health of an individual.</p><br>
+				<h2>BMI Result</h2><br>
+				<p>Underweight: Less than 18.5</p><br>
+				<p>Normal: 18.5 to Less than 25</p><br>
+				<p>Overweight: 25.0 to Less than 30</p><br>
+				<p>Obese: 30.0 or Higher</p></p><br><br><br>
+				<a href="Main.html">Read more</a>
+		</div>
+</body>
+	<script>
+		function BMI () {
+		
+			var h = document.getElementById('h').value;
+			var w = document.getElementById('w').value;
+			
+			var bmi = w/ (h/100*h/100);
+			var bmio = (bmi.toFixed(2));
+			
+			document.getElementById("result").innerHTML = " Your Body Mass Index (BMI) is " + bmio;
+		}
+	</script>
+</html>
